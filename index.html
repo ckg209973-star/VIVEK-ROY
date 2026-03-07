@@ -1,214 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIVEK ROY</title>
 
-    <!-- Meta Pixel Code -->
-    <script>
-        ! function(f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function() {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }
-        (window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1183539050152137');
-        fbq('track', 'PageView');
-    </script>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];
+t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}
+(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 
-    <noscript>
+fbq('init', '26042191398780352');
+fbq('track', 'PageView');
+</script>
+
+<noscript>
 <img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1183539050152137&ev=PageView&noscript=1"/>
+src="https://www.facebook.com/tr?id=26042191398780352&ev=PageView&noscript=1"/>
 </noscript>
-    <!-- End Meta Pixel Code -->
+<!-- End Facebook Pixel Code -->
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garud Fixer (Baazigar)</title>
+<style>
 
-    <!-- Preload background for faster render -->
-    <link rel="preload" as="image" href="https://applescoop.org/image/wallpapers/iphone/iphone-dark-black-and-blue-abstract-impede-depth-effect-with-think-lines-apple-iphone-21-09-2025-1758398684-hd-wallpaper.webp">
+body{
+margin:0;
+padding:0;
+background:#000;
+font-family:Arial, Helvetica, sans-serif;
+text-align:center;
+color:white;
+}
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-        }
+/* Title */
 
-        body {
-            background: #0c0f1a url("https://applescoop.org/image/wallpapers/iphone/iphone-dark-black-and-blue-abstract-impede-depth-effect-with-think-lines-apple-iphone-21-09-2025-1758398684-hd-wallpaper.webp") center/cover no-repeat fixed;
-            color: #fff;
-            min-height: 100vh;
-        }
+.title{
+margin-top:120px;
+font-size:34px;
+font-weight:bold;
+color:#39ff14;
+text-shadow:0 0 12px #39ff14;
+}
 
-        .overlay {
-            background: rgba(10, 12, 22, .82);
-            min-height: 100vh;
-        }
+/* Countdown */
 
-        .container {
-            max-width: 420px;
-            margin: auto;
-            padding: 20px 15px 90px;
-        }
+#count{
+font-size:80px;
+margin:40px 0;
+color:#7fd8ff;
+}
 
-        /* Profile */
+/* Join Button */
 
-        .profile-box {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+.join-btn{
+display:inline-block;
+padding:16px 40px;
+font-size:20px;
+color:white;
+text-decoration:none;
+border-radius:40px;
+background:linear-gradient(90deg,#3a0ca3,#4361ee);
+border:5px solid #e0e0e0;
+box-shadow:0 0 25px #fff;
+animation:zoom 1.5s infinite;
+}
 
-        .profile-box img {
-            width: 95px;
-            height: 95px;
-            border-radius: 50%;
-            border: 2px solid #ffffff55;
-        }
+@keyframes zoom{
+0%{transform:scale(1);}
+50%{transform:scale(1.08);}
+100%{transform:scale(1);}
+}
 
-        .profile-box h1 {
-            margin-top: 10px;
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
+/* Features */
 
-        /* Card */
+.features{
+margin-top:25px;
+font-size:16px;
+line-height:30px;
+color:#e8e8e8;
+}
 
-        .card {
-            background: #ffffff12;
-            border: 1px solid #ffffff20;
-            border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 15px;
-            text-align: center;
-        }
+.features span{
+display:block;
+}
 
-        /* Button */
+/* Redirect text */
 
-        .btn {
-            display: block;
-            margin-top: 14px;
-            padding: 14px;
-            border-radius: 30px;
-            background: #1fa2ff;
-            color: #fff;
-            font-weight: 700;
-            text-decoration: none;
-        }
+.redirect{
+margin-top:20px;
+color:#777;
+font-size:14px;
+}
 
-        /* Features */
-
-        .features {
-            list-style: none;
-            margin-top: 8px;
-        }
-
-        .features li {
-            font-size: .95rem;
-            margin: 6px 0;
-        }
-
-        .features li::before {
-            content: "✓ ";
-            color: #4caf50;
-        }
-
-        /* Footer */
-
-        .footer {
-            text-align: center;
-            font-size: .85rem;
-            opacity: .85;
-        }
-
-        .footer a {
-            color: #6bd4ff;
-            text-decoration: none;
-        }
-
-        /* Bottom CTA */
-
-        .bottom-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: #000000cc;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .bottom-bar a {
-            display: inline-block;
-            width: 90%;
-            max-width: 320px;
-            padding: 14px;
-            border-radius: 30px;
-            background: #12d8fa;
-            color: #000;
-            font-weight: 700;
-            text-decoration: none;
-        }
-    </style>
+</style>
 </head>
 
 <body>
-    <div class="overlay">
 
-        <div class="container">
+<div class="title">
+VIVEK ROY
+</div>
 
-            <div class="profile-box">
-                <img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/6952a267b21b7_40bb2f3d-25fd-484d-9b63-a8468a701820.jfif" alt="Garud Fixer">
-                <h1>Garud Fixer (Baazigar)</h1>
-            </div>
+<div id="count">37</div>
 
-            <div class="card">
-                <h2>Cricket Match Predictions</h2>
-                <p style="opacity:.9;">Well researched match insights & analysis</p>
-                <a href="https://t.me/+9WnufKITJK9lM2I1" class="btn">Join Free Telegram Channel</a>
-            </div>
+<a class="join-btn" href="https://t.me/+J5tENHWCBXIyOTZl">
+JOIN TELEGRAM CHANNEL
+</a>
 
-            <div class="card">
-                <h2>What You Get</h2>
-                <ul class="features">
-                    <li>Match & Toss Analysis</li>
-                    <li>Team Performance Insights</li>
-                    <li>Daily Free Updates</li>
-                    <li>Simple & Clean Info</li>
-                </ul>
-            </div>
+<div class="features">
+<span>✅ Free Access</span>
+<span>✅ IPL, T20s, World Cup</span>
+<span>✅ Join 1000s of fans who watch with clarity, not confusion</span>
+</div>
 
-            <div class="card">
-                <p style="opacity:.9;">
-                    Trusted by thousands of cricket lovers across India.
-                </p>
-            </div>
+<div class="redirect">
+Redirecting in 2 seconds...
+</div>
 
-            <div class="footer">
-                Marketing by :
-                <a href="https://t.me/+lpl9wSvnR3YyZjA1">QB Agency™</a>
-            </div>
-
-        </div>
-
-        <div class="bottom-bar">
-            <a href="https://t.me/+9WnufKITJK9lM2I1">अभी टेलीग्राम जॉइन करें</a>
-        </div>
-
-    </div>
 </body>
-
 </html>
