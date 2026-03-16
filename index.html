@@ -14,19 +14,15 @@ if(!f._fbq)f._fbq=n;
 n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];
 t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
+t.src=v;
+s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}
 (window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '26042191398780352');
+fbq('init', '1508155957600104');
 fbq('track', 'PageView');
 </script>
-
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=26042191398780352&ev=PageView&noscript=1"/>
-</noscript>
 <!-- End Facebook Pixel Code -->
 
 <style>
@@ -35,7 +31,7 @@ body{
 margin:0;
 padding:0;
 background:#000;
-font-family:Arial, Helvetica, sans-serif;
+font-family:Arial;
 text-align:center;
 color:white;
 }
@@ -43,61 +39,53 @@ color:white;
 /* Title */
 
 .title{
+font-size:42px;
 margin-top:120px;
-font-size:34px;
-font-weight:bold;
 color:#39ff14;
-text-shadow:0 0 12px #39ff14;
+text-shadow:0 0 20px #39ff14,0 0 40px #39ff14;
+font-weight:bold;
 }
 
-/* Countdown */
+/* Counter */
 
-#count{
-font-size:80px;
+.counter{
+font-size:120px;
 margin:40px 0;
-color:#7fd8ff;
+color:#7ed3ff;
 }
 
 /* Join Button */
 
 .join-btn{
 display:inline-block;
-padding:16px 40px;
-font-size:20px;
-color:white;
-text-decoration:none;
+padding:18px 40px;
+font-size:22px;
 border-radius:40px;
-background:linear-gradient(90deg,#3a0ca3,#4361ee);
-border:5px solid #e0e0e0;
-box-shadow:0 0 25px #fff;
-animation:zoom 1.5s infinite;
+text-decoration:none;
+color:white;
+background:linear-gradient(90deg,#4b00ff,#4f7cff);
+border:6px solid #d9d9d9;
+box-shadow:0 0 25px rgba(255,255,255,0.7);
+transition:0.3s;
 }
 
-@keyframes zoom{
-0%{transform:scale(1);}
-50%{transform:scale(1.08);}
-100%{transform:scale(1);}
+.join-btn:hover{
+transform:scale(1.05);
 }
 
 /* Features */
 
 .features{
-margin-top:25px;
-font-size:16px;
-line-height:30px;
-color:#e8e8e8;
+margin-top:30px;
+font-size:18px;
+line-height:35px;
+color:#ddd;
 }
-
-.features span{
-display:block;
-}
-
-/* Redirect text */
 
 .redirect{
 margin-top:20px;
-color:#777;
-font-size:14px;
+color:#888;
+font-size:16px;
 }
 
 </style>
@@ -105,25 +93,43 @@ font-size:14px;
 
 <body>
 
-<div class="title">
-VIVEK ROY
-</div>
+<div class="title">VIVEK ROY</div>
 
-<div id="count">37</div>
+<div class="counter" id="count">10</div>
 
 <a class="join-btn" href="https://t.me/+J5tENHWCBXIyOTZl">
 JOIN TELEGRAM CHANNEL
 </a>
 
 <div class="features">
-<span>✅ Free Access</span>
-<span>✅ IPL, T20s, World Cup</span>
-<span>✅ Join 1000s of fans who watch with clarity, not confusion</span>
+✅ Free Access<br>
+✅ IPL, T20s, World Cup<br>
+✅ Join 1000s of fans who watch with clarity, not confusion
 </div>
 
 <div class="redirect">
-Redirecting in 2 seconds...
+Redirecting in <span id="time">10</span> seconds...
 </div>
+
+<script>
+
+var time = 10;
+
+var countdown = setInterval(function(){
+
+time--;
+
+document.getElementById("time").innerHTML = time;
+document.getElementById("count").innerHTML = time;
+
+if(time <= 0){
+clearInterval(countdown);
+window.location.href="https://t.me/+J5tENHWCBXIyOTZl";
+}
+
+},1000);
+
+</script>
 
 </body>
 </html>
