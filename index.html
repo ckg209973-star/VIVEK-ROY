@@ -5,17 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VIVEK ROY</title>
 
-<!-- Facebook Pixel Code -->
+<!-- Facebook Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];
-t=b.createElement(e);t.async=!0;
-t.src=v;
-s=b.getElementsByTagName(e)[0];
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}
 (window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
@@ -23,14 +20,13 @@ s.parentNode.insertBefore(t,s)}
 fbq('init', '1508155957600104');
 fbq('track', 'PageView');
 </script>
-<!-- End Facebook Pixel Code -->
 
 <style>
 
 body{
 margin:0;
 padding:0;
-background:#000;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 font-family:Arial;
 text-align:center;
 color:white;
@@ -41,8 +37,8 @@ color:white;
 .title{
 font-size:42px;
 margin-top:120px;
-color:#39ff14;
-text-shadow:0 0 20px #39ff14,0 0 40px #39ff14;
+color:#00eaff;
+text-shadow:0 0 20px #00eaff,0 0 40px #00eaff;
 font-weight:bold;
 }
 
@@ -51,7 +47,7 @@ font-weight:bold;
 .counter{
 font-size:120px;
 margin:40px 0;
-color:#7ed3ff;
+color:#ffffff;
 }
 
 /* Join Button */
@@ -63,14 +59,14 @@ font-size:22px;
 border-radius:40px;
 text-decoration:none;
 color:white;
-background:linear-gradient(90deg,#4b00ff,#4f7cff);
-border:6px solid #d9d9d9;
-box-shadow:0 0 25px rgba(255,255,255,0.7);
+background:linear-gradient(90deg,#0066ff,#00c6ff);
+border:6px solid #ffffff;
+box-shadow:0 0 25px rgba(0,170,255,0.8);
 transition:0.3s;
 }
 
 .join-btn:hover{
-transform:scale(1.05);
+transform:scale(1.07);
 }
 
 /* Features */
@@ -79,12 +75,12 @@ transform:scale(1.05);
 margin-top:30px;
 font-size:18px;
 line-height:35px;
-color:#ddd;
+color:#e6f7ff;
 }
 
 .redirect{
 margin-top:20px;
-color:#888;
+color:#d0eaff;
 font-size:16px;
 }
 
@@ -95,7 +91,7 @@ font-size:16px;
 
 <div class="title">VIVEK ROY</div>
 
-<div class="counter" id="count">10</div>
+<div class="counter" id="count">20</div>
 
 <a class="join-btn" href="https://t.me/+J5tENHWCBXIyOTZl">
 JOIN TELEGRAM CHANNEL
@@ -108,12 +104,12 @@ JOIN TELEGRAM CHANNEL
 </div>
 
 <div class="redirect">
-Redirecting in <span id="time">10</span> seconds...
+Redirecting in <span id="time">20</span> seconds...
 </div>
 
 <script>
 
-var time = 10;
+var time = 20;
 
 var countdown = setInterval(function(){
 
