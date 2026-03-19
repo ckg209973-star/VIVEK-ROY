@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VIVEK ROY</title>
 
-<!-- Facebook Pixel -->
+<!-- Facebook Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -13,118 +13,107 @@ n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}
-(window, document,'script',
+s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
 fbq('init', '1508155957600104');
 fbq('track', 'PageView');
 </script>
 
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1508155957600104&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
 <style>
-
-body{
-margin:0;
-padding:0;
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-font-family:Arial;
-text-align:center;
-color:white;
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
 }
 
-/* Title */
-
-.title{
-font-size:42px;
-margin-top:120px;
-color:#00eaff;
-text-shadow:0 0 20px #00eaff,0 0 40px #00eaff;
-font-weight:bold;
+.title {
+    margin-top: 80px;
+    font-size: 40px;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
 }
 
-/* Counter */
-
-.counter{
-font-size:120px;
-margin:40px 0;
-color:#ffffff;
+.countdown {
+    font-size: 100px;
+    margin: 40px 0;
+    color: #7ec8ff;
 }
 
-/* Join Button */
-
-.join-btn{
-display:inline-block;
-padding:18px 40px;
-font-size:22px;
-border-radius:40px;
-text-decoration:none;
-color:white;
-background:linear-gradient(90deg,#0066ff,#00c6ff);
-border:6px solid #ffffff;
-box-shadow:0 0 25px rgba(0,170,255,0.8);
-transition:0.3s;
+.btn {
+    display: inline-block;
+    padding: 18px 40px;
+    border-radius: 40px;
+    background: linear-gradient(45deg, #4b00ff, #3aa0ff);
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    box-shadow: 0 0 25px rgba(255,255,255,0.6);
+    transition: 0.3s;
 }
 
-.join-btn:hover{
-transform:scale(1.07);
+.btn:hover {
+    transform: scale(1.05);
 }
 
-/* Features */
-
-.features{
-margin-top:30px;
-font-size:18px;
-line-height:35px;
-color:#e6f7ff;
+.points {
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 30px;
 }
 
-.redirect{
-margin-top:20px;
-color:#d0eaff;
-font-size:16px;
+.redirect {
+    margin-top: 30px;
+    color: gray;
+    font-size: 14px;
 }
-
 </style>
-</head>
 
+</head>
 <body>
 
 <div class="title">VIVEK ROY</div>
 
-<div class="counter" id="count">20</div>
+<div class="countdown" id="count">37</div>
 
-<a class="join-btn" href="https://t.me/+J5tENHWCBXIyOTZl">
-JOIN TELEGRAM CHANNEL
+<a href="https://t.me/+J5tENHWCBXIyOTZl" class="btn">
+    JOIN TELEGRAM CHANNEL
 </a>
 
-<div class="features">
-✅ Free Access<br>
-✅ IPL, T20s, World Cup<br>
-✅ Join 1000s of fans who watch with clarity, not confusion
+<div class="points">
+    ✅ Free Access <br>
+    ✅ IPL, T20s, World Cup <br>
+    ✅ Join 1000s of fans who watch with clarity, not confusion
 </div>
 
-<div class="redirect">
-Redirecting in <span id="time">20</span> seconds...
-</div>
+<div class="redirect">Redirecting in 3 seconds...</div>
 
 <script>
+let time = 37;
+let count = document.getElementById("count");
 
-var time = 20;
+let timer = setInterval(() => {
+    time--;
+    count.innerHTML = time;
 
-var countdown = setInterval(function(){
+    if(time <= 0){
+        clearInterval(timer);
+    }
+}, 1000);
 
-time--;
-
-document.getElementById("time").innerHTML = time;
-document.getElementById("count").innerHTML = time;
-
-if(time <= 0){
-clearInterval(countdown);
-window.location.href="https://t.me/+J5tENHWCBXIyOTZl";
-}
-
-},1000);
-
+// Redirect after 3 sec
+setTimeout(() => {
+    window.location.href = "https://t.me/+J5tENHWCBXIyOTZl";
+}, 3000);
 </script>
 
 </body>
